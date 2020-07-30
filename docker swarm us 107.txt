@@ -1,0 +1,78 @@
+Leader + Docker compose 
+
+191  mkdir compose
+  192  cd compose
+  193  vi docker-compose.yml
+  194  docker-compose up -d
+  195  docker ps
+  196  ls -ltr
+  197  cat docker-compose.yml
+  198  docker ps
+  199  docker stop 3df737812ab6
+  200  docker ps
+  201  docker images
+  202  clear
+  203  docker swarm init\
+  204  docker swarm init
+  205  docker node ls
+  206  docker swarm leave
+  207  docker swarm leave --force
+  208  docker swarm init
+  209  docker node ls
+  210  clear
+  211  docker image
+  212  clear
+  213  docker images
+  214  docker service create --name srtom --replicas 5 -p 9999:80 skillrary/srdf
+  215  docker service ls
+  216  docker ps
+  217  docker stop cebbffd9bb62
+  218  docker ps
+  219  docker stop 7817fa442884 132389bd7b83 6df55f26c1ff
+  220  docker ps
+  221  docker service ls
+  222  clear
+  223  docker service ls
+  224  docker service scale srtom=20
+  225  docker ps
+  226  docker service scale srtom=2
+  227  docker ps
+  228  docker service scale srtom=5
+  229  docker node ls
+  230  docker ps
+  231  docker stop e11fcbd5ff67 fb94422f5c23
+  232  docker ps
+  233  docker node ls
+  234  docker node promote t00zs14xseljac31b40qbn190
+  235  docker node ls
+  236  docker node inspect self
+  237  docker node inspect self --pretty
+  238  docker node ls
+  239  docker node inspect t00zs14xseljac31b40qbn190 --pretty
+
+
+
+Workernode
+
+    1  yum update
+    2  sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+    3  yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+    4  yum install docker-ce docker-ce-cli containerd.io
+    5  docker --version
+    6  systemctl start docker
+    7  docker ps
+    8  docker images
+    9  docker pull skillrary/srdf
+   10  docker swarm join --token SWMTKN-1-30g9pjx320bh6da91icuynrsfhs955q55svong5affhmv9xa9d-2w66daos26mapa009mwglhs9l 172.31.42.139:2377
+   11  docker swarm leave
+   12   docker swarm join --token SWMTKN-1-0b50hl0lr7ykhavjxo8bu1bos03hvxc9is05hsy1ejtu8svsm1-0xzwmaw9vxx7soloxjb4382ud 172.31.42.139:2377
+   13  docker ps
+   14  docker stop 03e84bb59a7e
+   15  docker ps
+   16  docker ps 77bccff9020a
+   17  docker stop 77bccff9020a
+   18  docker ps
+   19  systemctl stop docker
+   20  systemctl start docker
+   21  docker ps
+   22  docker node ls
